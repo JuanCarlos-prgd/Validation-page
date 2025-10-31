@@ -54,6 +54,7 @@ input, select {
   font-size: 0.85em;
   color: #666;
   margin-top: 5px;
+  display: none;
 }
 
 /* Código de teléfono */
@@ -93,4 +94,18 @@ input, select {
   input, select {
     font-size: 0.95em;
   }
+}
+
+.correct{
+
+  outline:4px solid green;
+}
+
+.incorrect{
+
+  outline: 2px solid red;
+}
+
+.show-information{
+  display: block;
 }

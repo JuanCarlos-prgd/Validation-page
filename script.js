@@ -1,45 +1,40 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const countrySelect = document.getElementById("countries");
-  const phoneCodeSpan = document.getElementById("phone-code");
-  const form = document.getElementById("form");
+const userNameRegex = /[a-zA-Z][a-zA-Z0-9-_]{6,8}/;
+const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z0-9]).{8,10}$/;
+const emailRegex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+const numeroMovil = /^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$/;
 
-  // Actualiza el código de país al seleccionar
-  countrySelect.addEventListener("change", function () {
-    const selectedOption = countrySelect.options[countrySelect.selectedIndex];
-    const code = selectedOption.value;
-    phoneCodeSpan.textContent = "+" + code;
-  });
 
-  // Validación del formulario
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+// Ajustamos el codigo para que solo aparezcan los paises
+const countries = document.querySelector("#countries");
 
-    const username = document.getElementById("username").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const password = document.getElementById("password").value;
-    const confirmPassword = document.getElementById("confirm-password").value;
+// Estas lineas de codigo se utilizan para separar el nombre del pais de los numeros del codigo
 
-    // Validar teléfono
-    if (!/^\d+$/.test(phone)) {
-      alert("El número de teléfono solo debe contener dígitos.");
-      return;
-    }
+[...countries].forEach(options=>{
+  options.innerHTML=(options.innerHTML.split("(")[0])
+})
 
-    // Validar contraseña
-    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{1,16}$/;
-    if (!passwordRegex.test(password)) {
-      alert("La contraseña debe incluir al menos una letra y un número, máximo 16 caracteres.");
-      return;
-    }
 
-    // Confirmar contraseña
-    if (password !== confirmPassword) {
-      alert("Las contraseñas no coinciden.");
-      return;
-    }
+//Validation 
+let usernameValidation = false;
 
-    // Si todo está bien
-    alert(`¡Registro exitoso!\nUsuario: ${username}\nCorreo: ${email}`);
-  });
+// Selectores
+usernameInput = document.querySelector('#username');
+
+usernameInput.addEventListener('input',e=> {
+  usernameValidation = userNameRegex.test(e.target.value);
+  const informacion = e.target.parentElement.children[1];
+
+
+if (usernameValidation) {
+  usernameInput.classList.add('correct');
+  usernameInput.classList.remove('incorrect');
+  informacion.classList.remove('show-information');
+
+} else {
+  usernameInput.classList.add('incorrect');
+  usernameInput.classList.remove('correct');
+  informacion.classList.add('show-information');
+
+}
 });
+ 

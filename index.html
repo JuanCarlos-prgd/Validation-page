@@ -13,13 +13,19 @@
         <h1 id="form-title">Validacion de Usuario</h1>
         <div class="input-div">
             <input type="text" id="username" placeholder="Nombre de usuario">
+                            <p class="información">
+                    Puedo incluir mayúsculas y números, min 8 caracteres, max 16.
+                </p>
 
         </div>
         <div class="input-div">
             <input type="email" id="email" placeholder="Correo electronico">
+            <p class="información">
+                Ejm: Jc257535@gmail.com
+            </p>
         </div>
         <div class="input-div">
-            <select name="countryCode" id="countries">
+            <select name="countryCode" id="countries">  
                 <option value="" selected disabled>selecciona un pais</option>
                 <option data-countryCode="GB" value="44">UK (+44)</option>
                 <option data-countryCode="US" value="1">USA (+1)</option>
@@ -265,11 +271,11 @@
 
         </div>
 
-        <button id="form-btn">Registrar</button>
+        <button disabled id="form-btn">Registrar</button>
     </form>
 
     
-<link rel="stylesheet" href="script.js">
+<script src="script.js"></script>
 </body>
 
 </html>
