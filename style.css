@@ -1,0 +1,96 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fondo y fuente general */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Formulario */
+form {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Título */
+#form-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.8em;
+}
+
+/* Contenedores de entrada */
+.input-div {
+  margin-bottom: 15px;
+}
+
+/* Inputs y select */
+input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  margin-top: 5px;
+}
+
+/* Etiquetas y mensajes */
+.informacion, .información {
+  font-size: 0.85em;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Código de teléfono */
+#phone\ code {
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/* Botón */
+#form-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#form-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  form {
+    padding: 20px;
+  }
+
+  #form-title {
+    font-size: 1.5em;
+  }
+
+  input, select {
+    font-size: 0.95em;
+  }
+}
