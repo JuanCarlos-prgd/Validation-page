@@ -1,3 +1,4 @@
+// VALIDADOR
 const userNameRegex = /[a-zA-Z][a-zA-Z0-9-_]{6,8}/;
 const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z0-9]).{8,10}$/;
 const emailRegex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
@@ -12,7 +13,6 @@ const countries = document.querySelector("#countries");
 [...countries].forEach(options=>{
   options.innerHTML=(options.innerHTML.split("(")[0])
 })
-
 
 //Validation 
 let usernameValidation = false;
