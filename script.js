@@ -30,6 +30,8 @@ let passwordValidacion = false;
 let confirmPasswordValidacion = false;
 let countriesValidacion = false;
 
+//Funcion para validar los campos
+
 const validation = (e, validation, element) => {
     const informacion = element.id == "phone" ? e.target.parentElement.children[2]: e.target.parentElement.children[1];
     console.log (informacion)
