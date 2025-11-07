@@ -31,8 +31,9 @@ let confirmPasswordValidacion = false;
 let countriesValidacion = false;
 
 const validation = (e, validation, element) => {
-    const informacion = e.target.parentElement.children[1];
-    console.log
+    const informacion = element.id == "phone" ? e.target.parentElement.children[2]: e.target.parentElement.children[1];
+    console.log (informacion)
+
     if(validation){
         element.classList.add("correct");
         element.classList.remove("incorrect");
