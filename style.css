@@ -107,12 +107,16 @@ input, select {
   border-radius: 6px;
   font-size: 1em;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  /* transition: background-color 0.3s ease; */
 }
 
-#form-btn:hover {
-  background-color: #0056b3;
+#form-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  /* background-color: #0056b3; */
 }
+
+
 
 /* Responsive */
 @media (max-width: 600px) {
