@@ -84,7 +84,7 @@ phoneInput.addEventListener('input', e => {
   phoneValidacion = numeroMovil.test(e.target.value);
   const informacion = e.target.parentElement.children[1];
   console.log(informacion)
-  validation ( e,phoneValidacion,phoneInput)
+  validation ( e, phoneValidacion,phoneInput)
 
   // if (phoneValidacion) {
   //   phoneInput.classList.add('correct');
@@ -136,16 +136,18 @@ countries.addEventListener('change', e => {
   const optionSelected = [...e.target.children].find(option=> option.selected);
   phoneCodeInput.innerHTML = optionSelected.value
   console.log (optionSelected.value)
+  console.log (informacion)
+  validation (e, countriesValidacion, countries)
 
-  if (countriesValidacion) {
-    countries.classList.add('correct');
-    countries.classList.remove('incorrect');
-    informacion.classList.remove('show-information');
-  } else {
-    countries.classList.add('incorrect');
-    countries.classList.remove('correct');
-    informacion.classList.add('show-information');
-  }
+  // if (countriesValidacion) {
+  //   countries.classList.add('correct');
+  //   countries.classList.remove('incorrect');
+  //   informacion.classList.remove('show-information');
+  // } else {
+  //   countries.classList.add('incorrect');
+  //   countries.classList.remove('correct');
+  //   informacion.classList.add('show-information');
+  // }
 });
 
 form.addEventListener('submit', e => {

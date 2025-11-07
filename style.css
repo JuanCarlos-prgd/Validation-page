@@ -147,3 +147,10 @@ input, select {
 .show-information{
   display: block;
 }
+
+footer {
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
