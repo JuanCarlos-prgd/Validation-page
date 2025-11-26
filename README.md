@@ -36,4 +36,5 @@ El formulario incluye:
 ---
 
 👨‍💻 Autor
-Juan Carrillo 🔗 GitHub
+Juan Carrillo 
+🔗 GitHub
