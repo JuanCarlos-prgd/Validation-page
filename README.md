@@ -1,22 +1,39 @@
-📝 Formulario de Validación con JavaScript
-Proyecto de un formulario de registro con validación de campos en tiempo real utilizando HTML, CSS y JavaScript (Vanilla JS). Se enfoca en el uso de Expresiones Regulares (RegEx) para aplicar reglas de validación detalladas.
+# 🔐 Validación de Usuario
 
-✨ Características Principales
-Validación en tiempo real: Los campos se validan mientras el usuario escribe.
-Reglas de Validación (RegEx): Se utilizan expresiones regulares para asegurar formatos correctos en:
-Nombre de Usuario: Alfanumérico, 4-8 caracteres.
-Email: Formato estándar.
-Contraseña: 8-10 caracteres, requiere Mayúscula, minúscula y número.
-Campos Interconectados:
-La selección de País actualiza el prefijo del código telefónico.
-La Confirmación de Contraseña debe coincidir con la contraseña principal.
-Botón de Envío Dinámico: El botón de Registrar se habilita solo cuando todos los campos han sido validados correctamente.
-⚙️ Lógica Central
-La validación se maneja mediante una función centralizada (validation) que:
+Este proyecto es una aplicación web que implementa un **formulario de registro con validaciones básicas**, diseñado para ser claro, seguro y responsivo.  
+Fue desarrollado con **HTML, CSS y JavaScript**, cuidando la experiencia de usuario y la legibilidad.
 
-Ejecuta NOMBRE_USUARIO_REGEX.test(valor) (y similares) en cada input.
-Aplica clases de estilo (correct o incorrect).
-Actualiza el estado del botón de envío (formBtn.disabled) basándose en un conjunto de variables booleanas de validación (ej: usernameValidation, emailValidation, etc.).
+---
+
+## ✨ Características
+
+- 📋 **Formulario de registro** con los siguientes campos:
+  - Nombre de usuario (8–16 caracteres, admite mayúsculas y números).
+  - Correo electrónico (formato válido).
+  - Teléfono (solo números, con código de país).
+  - Contraseña (máx. 16 caracteres, debe incluir letras y números).
+  - Confirmación de contraseña.
+- ✅ **Validaciones visuales**:
+  - Campos correctos resaltados en verde.
+  - Campos incorrectos resaltados en rojo.
+  - Mensajes de ayuda que aparecen dinámicamente.
+- 🎨 **Diseño moderno** con fondo personalizado y capa oscura para mejorar la legibilidad.
+- 📱 **Responsivo**: se adapta a pantallas pequeñas (mobile-friendly).
+- 🔒 Botón de registro deshabilitado hasta que todos los campos sean válidos.
+
+---
+
+## 🖼️ Vista previa
+
+El formulario incluye:
+
+1. **Nombre de usuario** con reglas de longitud y caracteres.  
+2. **Correo electrónico** con formato válido.  
+3. **Teléfono** con código de país y validación numérica.  
+4. **Contraseña y confirmación** con reglas de seguridad.  
+5. **Botón de registro** que se activa solo cuando todo es correcto.  
+
+---
 
 👨‍💻 Autor
 Juan Carrillo 🔗 GitHub
